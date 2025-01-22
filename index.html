@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mai Kisaan</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-bar bg-transparent"
+            style="position: fixed; width: 100%; top: 0; left: 0; z-index: 1000;">
+            <nav class="navbar navbar-expand-lg navbar-light py-2 px-4 w-100">
+                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
+                    <div class="icon p-2 me-2">
+                        <img class="img-fluid" src="img/Logo.png" alt="Icon" style="width: 60px; height: 60px;">
+                    </div>
+                    <h1 class="m-0 text-primary">Mai Kisaan</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="#" class="nav-item nav-link">About</a>
+                        <a href="#" class="nav-item nav-link">Career</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="index.html#Services" class="dropdown-item">Price Mandi</a>
+                                <a href="" class="dropdown-item">Trade Market</a>
+                                <a href="" class="dropdown-item">Import/Export</a>
+                                <a href="" class="dropdown-item">Organic Products</a>
+                                <a href="" class="dropdown-item">Connect - Buyers/Sellers</a>
+                                <a href="" class="dropdown-item">Updates News/Blogs</a>
+                                <a href="" class="dropdown-item">Download Application</a>
+                                <a href="" class="dropdown-item">Support 24/7</a>
+                            </div>
+                        </div>
+                        <a href="#" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="" class="btn btn-primary px-3 d-none d-lg-flex">Register</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Video Section Start -->
+        <div style="position: relative; height: 100vh; overflow: hidden; margin-top: 80px;">
+            <video autoplay muted loop playsinline id="bgVideo"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; opacity: 90%; filter: grayscale(100%); transition: filter 2s ease-in-out;">
+                <source src="img/farmC (2).mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+            <div id="logoContainer"
+                style="position: absolute; top: 20%; left: 95%; transform: translate(-50%, -50%); text-align: center; color: white; z-index: 2;">
+                <img src="img/Logo.png" alt="Mai Kisaan Logo"
+                    style="width: 100px; height: auto; margin-bottom: 20px; opacity: 0; animation: fadeInLogo 2s ease-in-out forwards, scaleLogo 3s ease-in-out forwards;">
+            </div>
+        </div>
+        <!-- Video Section End -->
+
+        <!-- CSS Animations -->
+        <style>
+            /* Fade in and scale animation for the logo */
+            @keyframes fadeInLogo {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+
+                50% {
+                    opacity: 0.5;
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* Scaling effect for the logo */
+            @keyframes scaleLogo {
+                0% {
+                    transform: scale(0.8);
+                }
+
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            /* Change video to color after logo appears */
+            .colorEffect {
+                filter: grayscale(0%) !important;
+            }
+
+            /* Parallax scrolling effect for background */
+            #bgVideo {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: -1;
+                transform: translateZ(0);
+            }
+
+            /* Text Styling for the Header */
+            .header .display-5 {
+                font-family: 'Poppins', sans-serif;
+                font-weight: bold;
+                font-size: 3rem;
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            }
+
+            .header .btn {
+                font-size: 1.2rem;
+                font-weight: 600;
+                transition: background-color 0.3s ease;
+            }
+
+            .header .btn:hover {
+                background-color: #0453a6;
+                transform: scale(1.05);
+            }
+
+            /* Dropdown menu styling */
+            .nav-item.dropdown:hover .dropdown-menu {
+                display: block;
+                animation: fadeInDropdown 0.3s ease;
+            }
+
+            @keyframes fadeInDropdown {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
+            }
+        </style>
+
+        <!-- JavaScript to handle color transition -->
+        <script>
+            // When the logo fades in, make the video color
+            document.addEventListener("DOMContentLoaded", function () {
+                setTimeout(() => {
+                    document.getElementById('bgVideo').classList.add('colorEffect');
+                }, 500); // Delay the color transition until after logo fade-in animation
+            });
+        </script>
+
+        <!-- Header Section with New Styling -->
+        <div class="container-fluid header bg-white p-0">
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                <div class="col-md-6 p-5 mt-lg-5">
+                    <h1 class="display-5 animated fadeIn mb-4">Empowering <span class="text-primary">Farmers</span> With
+                        Knowledge And Trust</h1>
+                    <a href="" class="btn btn-primary py-3 px-5 me-3 animated fadeIn">Get Started</a>
+                </div>
+                <div class="col-md-6 animated fadeIn">
+                    <div class="owl-carousel header-carousel">
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="img/FarmerImg.jpg" alt="Farmer Image"
+                                style="width: 100%; height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="img/FarmerImg2.jpg" alt="Farmer Image 2"
+                                style="width: 100%; height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="img/FarmerImg3.jpg" alt="Farmer Image 3"
+                                style="width: 100%; height: 400px; object-fit: cover;">
+                        </div>
+                        <div class="owl-carousel-item">
+                            <img class="img-fluid" src="img/FarmerImg4.jpg" alt="Farmer Image 4"
+                                style="width: 100%; height: 400px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Category Start -->
+        <div class="Services container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Mai Kisaan Features</h1>
+                </div>
+                <div class="row g-4">
+                    <!-- First row with 3 cards -->
+                    <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="PriceMandi.html">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/icon-apartment.png" alt="Icon">
+                                </div>
+                                <h6>Price Mandi</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/icon-villa.png" alt="Icon">
+                                </div>
+                                <h6>Trade Market</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/icon-house.png" alt="Icon">
+                                </div>
+                                <h6>Importers/Exporters/CHA</h6>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Second row with 3 cards -->
+                    <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/icon-housing.png" alt="Icon">
+                                </div>
+                                <h6>Organic Products</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/icon-building.png" alt="Icon">
+                                </div>
+                                <h6>Farmer Contacts</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3" href="NewsBlogs.html">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/icon-condominium.png" alt="Icon">
+                                </div>
+                                <h6>Updated News/Blogs</h6>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Third row with 1 centered card -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 mx-auto wow fadeInUp" data-wow-delay="0.7s">
+                        <a class="cat-item d-block bg-light text-center rounded p-3"
+                            href="https://play.google.com/store/games?hl=en">
+                            <div class="rounded p-4">
+                                <div class="icon mb-3">
+                                    <img class="img-fluid" src="img/icon-luxury.png" alt="Icon">
+                                </div>
+                                <h6>Download Application</h6>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                        <div class="about-img position-relative overflow-hidden p-5 pe-0">
+                            <img class="img-fluid w-100" src="img/Logo.png">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                        <h1 class="mb-4">#1 Platform for Empowering Indian Farmers</h1>
+                        <p class="mb-4">At MaiKisaan, we are dedicated to revolutionizing agriculture in India by
+                            connecting farmers to global markets. We ensure fair prices for their hard work, fostering
+                            prosperity and growth in every village. From importing premium-quality goods to exporting
+                            India's finest produce, MaiKisaan is here to empower our farmers and elevate Indian
+                            agriculture.</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Get higher rates for your produce compared to
+                            local markets</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Export Indian agricultural products to
+                            international buyers</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Support a transparent and farmer-centric trade
+                            platform</p>
+                        <p><i class="fa fa-check text-primary me-3"></i>Empowering rural communities through global
+                            opportunities</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Product List Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 justify-content-center text-center">
+                    <!-- Section Title -->
+                    <div class="col-lg-8">
+                        <div class="mb-5 wow slideInUp" data-wow-delay="0.3s">
+                            <h1 class="mb-3">Explore Our Organic Agricultural Products</h1>
+                            <p>Discover a curated selection of organic fruits, vegetables, grains, and more—carefully
+                                grown with sustainable farming practices to bring you the best quality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="row g-4">
+            <style>
+                /* Container for the cube */
+                .cube-container {
+                    perspective: 1000px;
+                    width: 250px;
+                    height: 250px;
+                    position: relative;
+                    margin: auto;
+                    margin-bottom: 5rem;
+                }
+
+                /* The cube */
+                .cube {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    transform-style: preserve-3d;
+                    animation: rotateCube 15s infinite linear;
+                }
+
+                /* Each face of the cube */
+                .cube img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                }
+
+                .cube .front {
+                    transform: translateZ(125px);
+                }
+
+                .cube .back {
+                    transform: rotateY(180deg) translateZ(125px);
+                }
+
+                .cube .left {
+                    transform: rotateY(-90deg) translateZ(125px);
+                }
+
+                .cube .right {
+                    transform: rotateY(90deg) translateZ(125px);
+                }
+
+                /* Cube rotation animation */
+                @keyframes rotateCube {
+                    0% {
+                        transform: rotateY(0deg);
+                    }
+
+                    25% {
+                        transform: rotateY(90deg);
+                    }
+
+                    50% {
+                        transform: rotateY(180deg);
+                    }
+
+                    75% {
+                        transform: rotateY(270deg);
+                    }
+
+                    100% {
+                        transform: rotateY(360deg);
+                    }
+                }
+
+                /* Product container styling */
+                .product-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 2rem;
+                }
+
+                /* Category section styling */
+                .category-section {
+                    margin-bottom: 3rem;
+                }
+
+                .category-section h3 {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    margin-bottom: 1rem;
+                }
+
+                .category-section p {
+                    font-size: 1rem;
+                    color: #555;
+                    margin-bottom: 1.5rem;
+                }
+
+                .organic-tagline {
+                    font-size: 1rem;
+                    color: #28a745;
+                    /* Organic green color */
+                    font-weight: bold;
+                    margin-top: 1rem;
+                }
+
+                .explore-more-btn {
+                    text-align: center;
+                    margin-top: 1.5rem;
+                }
+
+                .try-more-link {
+                    text-align: center;
+                    margin-top: 3rem;
+                    font-size: 1.2rem;
+                    color: #28a745;
+                    font-weight: bold;
+                }
+            </style>
+
+            <!-- Fruits Category -->
+            <div class="col-lg-4 col-md-6 category-section">
+                <h3>Organic Fruits</h3>
+                <p>Discover a variety of fresh, organic fruits—handpicked from sustainable farms. Our selection
+                    includes premium organic mangoes, apples, bananas, and more.</p>
+
+                <div class="cube-container">
+                    <div class="cube">
+                        <img src="img/mangoimg.jpg" alt="Organic Mangoes" class="front">
+                        <img src="img/appleimg.jpg" alt="Organic Apples" class="back">
+                        <img src="img/bananaimg.webp" alt="Organic Bananas" class="left">
+                        <img src="img/orangeimg.webp" alt="Organic Oranges" class="right">
+                    </div>
+                </div>
+                <div class="organic-tagline">
+                    Grown with love & care. 100% Organic!
+                </div>
+            </div>
+
+            <!-- Vegetables Category -->
+            <div class="col-lg-4 col-md-6 category-section">
+                <h3>Organic Vegetables</h3>
+                <p>Explore a wide range of fresh, organic vegetables, including tomatoes, potatoes, carrots, and
+                    more, all sourced from local farms practicing sustainable agriculture.</p>
+
+                <div class="cube-container">
+                    <div class="cube">
+                        <img src="img/tomatoimg.jpg" alt="Organic Tomatoes" class="front">
+                        <img src="img/potatoimg.jpg" alt="Organic Potatoes" class="back">
+                        <img src="img/cauliflowerimg.jpg" alt="Organic Cauliflower" class="left">
+                        <img src="img/carrotimg.jpg" alt="Organic Carrots" class="right">
+                    </div>
+                </div>
+                <div class="organic-tagline">
+                    Harvested with care from our organic farms!
+                </div>
+            </div>
+
+            <!-- Grains Category -->
+            <div class="col-lg-4 col-md-6 category-section">
+                <h3>Organic Grains</h3>
+                <p>Find the finest organic grains, including premium rice, oats, wheat, and barley, all grown
+                    with care to provide the best quality for your needs.</p>
+
+                <div class="cube-container">
+                    <div class="cube">
+                        <img src="img/riceimg.jpg" alt="Organic Rice" class="front">
+                        <img src="img/oats.jpg" alt="Organic Oats" class="back">
+                        <img src="img/wheat.jpeg" alt="Organic Wheat" class="left">
+                        <img src="img/barley.webp" alt="Organic Barley" class="right">
+                    </div>
+                </div>
+                <div class="organic-tagline">
+                    Grown without synthetic chemicals. Pure & Natural!
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Single Link Text for all Categories -->
+        <div class="try-more-link">
+            <a href="#" class="btn btn-success py-2 px-4">Try more organic products of different categories</a>
+        </div>
+
+    </div>
+    </div>
+    <!-- Product List End -->
+
+
+    <!-- Appointment Booking Section Start -->
+    <div class="appointment-section container py-5"
+        style="font-family: 'Poppins', sans-serif; border: 2px solid #64c39a; border-radius: 10px; padding: 20px;">
+        <h2 class="text-center mb-4" style="color: #021120;">To Get Expert Advice...</h2>
+
+        <!-- Row 1: Calendar and Consultation Selection -->
+        <div class="row g-4">
+            <!-- Calendar Section -->
+            <div class="col-md-4 d-flex align-items-stretch">
+                <div class="border rounded p-4 shadow-sm w-100" style="border: 2px solid #64c39a;">
+                    <h4 class="mb-3" style="color: #021120">Select Date</h4>
+                    <div id="calendarContainer"></div>
+                </div>
+            </div>
+
+            <!-- Consultation Type Section -->
+            <div class="col-md-8 d-flex align-items-stretch">
+                <div class="border rounded p-4 shadow-sm w-100" style="border: 2px solid #64c39a;">
+                    <h4 class="mb-3" style="color: #021120">Select Consultation Type</h4>
+                    <div class="row row-cols-2 g-3">
+                        <button class="btn btn-outline-primary consultation-type-btn"
+                            data-type="Farmers Contact">Farmers Contact</button>
+                        <button class="btn btn-outline-primary consultation-type-btn" data-type="Price Mandi">Price
+                            Mandi</button>
+                        <button class="btn btn-outline-primary consultation-type-btn"
+                            data-type="E-Commerce Business">E-Commerce Business</button>
+                        <button class="btn btn-outline-primary consultation-type-btn"
+                            data-type="Import/Export">Import/Export</button>
+
+                    </div>
+                    <!-- Time Slots Display -->
+                    <div id="timeSlotContainer" class="mt-4" style="display: none;">
+                        <h5 style="color: #021120">Available Time Slots</h5>
+                        <div id="timeSlots" class="d-flex flex-wrap gap-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: User Details Form -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="border rounded p-4 shadow-sm" style="border: 2px solid #64c39a;">
+                    <h4 class="mb-3" style="color: #021120">Details</h4>
+                    <input type="text" id="userName" class="form-control mb-3" placeholder="Enter Your Name" />
+                    <input type="text" id="contactNumber" class="form-control mb-3" placeholder="Contact Number" />
+                    <span id="contactError" class="text-danger" style="display: none;">Please enter a valid 10-digit
+                        contact number.</span>
+                    <button id="confirmBtn" disabled class="btn btn-primary w-100">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Confirmation Popup -->
+    <div id="confirmationPopup"
+        style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border: 2px solid #64c39a; border-radius: 8px; padding: 20px; width: 300px; text-align: center; z-index: 9999; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
+        <h3 style="color: #021120">Confirm Details</h3>
+        <p id="confirmationMessage" class="mb-3"></p>
+        <strong>For any query, call <span style="font-weight: bold;">123-456-7890</span></strong>
+        <p>We will contact you soon!</p>
+        <button onclick="closePopup()" class="btn btn-primary">Confirm</button>
+    </div>
+
+    <!-- JavaScript Functionality -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const calendarContainer = document.getElementById("calendarContainer");
+
+            let currentDate = new Date();
+            let selectedDate = '';
+            let selectedTimeSlot = '';
+            let selectedConsultationType = ''; // Store selected consultation type
+
+            function generateCalendar() {
+                let month = currentDate.getMonth();
+                let year = currentDate.getFullYear();
+
+                let calendarHTML =
+                    `<div class="d-flex justify-content-between align-items-center mb-3">
+            <button id="prevMonthBtn" class="btn btn-outline-secondary">&lt;</button>
+            <h5 class="mb-0" style="color: #021120;">${currentDate.toLocaleDateString('en-us', { month: 'long', year: 'numeric' })}</h5>
+            <button id="nextMonthBtn" class="btn btn-outline-secondary">&gt;</button>
+        </div>
+        <table class="table text-center">
+            <thead>
+                <tr><th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th></tr>
+            </thead>
+            <tbody>`;
+
+                currentDate.setMonth(month);
+                currentDate.setFullYear(year);
+                currentDate.setDate(1);
+
+                let firstDayIndex = currentDate.getDay();
+                let daysInMonth = new Date(year, month + 1, 0).getDate();
+
+                let date = 1;
+                for (let i = 0; i < 6; i++) {
+                    calendarHTML += '<tr>';
+                    for (let j = 0; j < 7; j++) {
+                        if (i === 0 && j < firstDayIndex) {
+                            calendarHTML += '<td></td>';
+                        } else if (date > daysInMonth) {
+                            break;
+                        } else {
+                            calendarHTML += `<td class="calendar-date p-2 border rounded" style="cursor: pointer;" data-date="${year}-${(month + 1).toString().padStart(2, '0')}-${date.toString().padStart(2, '0')}">${date}</td>`;
+                            date++;
+                        }
+                    }
+                    calendarHTML += '</tr>';
+                }
+                calendarHTML += '</tbody></table>';
+
+                calendarContainer.innerHTML = calendarHTML;
+
+                document.querySelectorAll('.calendar-date').forEach(day => {
+                    day.addEventListener('click', function () {
+                        document.querySelectorAll('.calendar-date').forEach(d => d.classList.remove('bg-primary', 'text-white'));
+                        this.classList.add('bg-primary', 'text-white');
+                        selectedDate = this.getAttribute('data-date');
+                        document.getElementById('timeSlotContainer').style.display = 'block';
+                        generateTimeSlots();
+                        activateConfirmButton();
+                    });
+                });
+
+                document.getElementById('prevMonthBtn').addEventListener('click', function () {
+                    currentDate.setMonth(currentDate.getMonth() - 1);
+                    generateCalendar();
+                });
+
+                document.getElementById('nextMonthBtn').addEventListener('click', function () {
+                    currentDate.setMonth(currentDate.getMonth() + 1);
+                    generateCalendar();
+                });
+            }
+
+            function generateTimeSlots() {
+                const timeSlots = document.getElementById('timeSlots');
+                const slots = ['9:00 AM', '10:00 AM', '11:00 AM', '1:00 PM', '2:00 PM', '3:00 PM'];
+                timeSlots.innerHTML = '';
+                slots.forEach(slot => {
+                    const button = document.createElement('button');
+                    button.innerText = slot;
+                    button.classList.add('btn', 'btn-outline-primary');
+                    button.addEventListener('click', () => {
+                        document.querySelectorAll('#timeSlots button').forEach(btn => btn.classList.remove('btn-primary'));
+                        button.classList.add('btn-primary');
+                        selectedTimeSlot = slot;
+                        activateConfirmButton();
+                    });
+                    timeSlots.appendChild(button);
+                });
+            }
+
+            // Store selected consultation type
+            document.querySelectorAll('.consultation-type-btn').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    document.querySelectorAll('.consultation-type-btn').forEach(b => b.classList.remove('btn-primary'));
+                    this.classList.add('btn-primary');
+                    selectedConsultationType = this.getAttribute('data-type');
+                    activateConfirmButton(); // Re-check if all conditions are met
+                });
+            });
+
+            function activateConfirmButton() {
+                const userName = document.getElementById('userName').value.trim();
+                const contactNumber = document.getElementById('contactNumber').value.trim();
+                const isContactValid = /^\d{10}$/.test(contactNumber);
+                document.getElementById('confirmBtn').disabled = !(selectedDate && selectedTimeSlot && selectedConsultationType && userName && isContactValid);
+            }
+
+            document.getElementById('userName').addEventListener('input', activateConfirmButton);
+            document.getElementById('contactNumber').addEventListener('input', activateConfirmButton);
+
+            document.getElementById('confirmBtn').addEventListener('click', function () {
+                const userName = document.getElementById('userName').value.trim();
+                const contactNumber = document.getElementById('contactNumber').value.trim();
+                const confirmationMessage =
+                    `<p><strong>Name:</strong> ${userName}</p>
+            <p><strong>Contact:</strong> ${contactNumber}</p>
+            <p><strong>Date:</strong> ${selectedDate}</p>
+            <p><strong>Time Slot:</strong> ${selectedTimeSlot}</p>
+            <p><strong>Consultation Type:</strong> ${selectedConsultationType}</p>`;
+                document.getElementById('confirmationMessage').innerHTML = confirmationMessage;
+                document.getElementById('confirmationPopup').style.display = 'block';
+            });
+
+            generateCalendar();
+        });
+
+        function closePopup() {
+            document.getElementById('confirmationPopup').style.display = 'none';
+        }
+
+    </script>
+
+
+
+
+    <!-- Collaborators Section Start -->
+    <div class="container-fluid collaborators-section py-5" style="background-color: #f8f9fa;">
+        <div class="container text-center">
+            <h2 class="display-5 mb-4">Our Trusted Collaborators</h2>
+            <div class="collaborators-container">
+                <div class="collaborators-scroll">
+                    <!-- Collaborator Item with Hover Effect -->
+                    <div class="collaborator-item">
+                        <img src="img/kulswami-logo.gif" alt="Collaborator 1" class="collaborator-img">
+                        <div class="collaborator-overlay">
+                            <p class="collaborator-description">Leading in the agricultural sector.</p>
+                        </div>
+                    </div>
+                    <div class="collaborator-item">
+                        <img src="img/intellisys.png" alt="Collaborator 2" class="collaborator-img">
+                        <div class="collaborator-overlay">
+                            <p class="collaborator-description">Providing Tech Support</p>
+                        </div>
+                    </div>
+                    <div class="collaborator-item">
+                        <img src="img/kulswami-logo.gif" alt="Collaborator 3" class="collaborator-img">
+                        <div class="collaborator-overlay">
+                            <p class="collaborator-description">Empowering farmers worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="collaborator-item">
+                        <img src="img/intellisys.png" alt="Collaborator 4" class="collaborator-img">
+                        <div class="collaborator-overlay">
+                            <p class="collaborator-description">Providing Tech Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Collaborators Section End -->
+
+    <!-- CSS Styles for Horizontal Auto-Scrolling -->
+    <style>
+        .collaborators-section {
+            background-color: #f8f9fa;
+            padding: 30px 0;
+            overflow: hidden;
+        }
+
+        .collaborators-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .collaborators-scroll {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            animation: scrollCollaborators 10s linear infinite;
+        }
+
+        .collaborator-item {
+            margin-right: 30px;
+            position: relative;
+            flex: 0 0 auto;
+            transition: transform 0.3s ease;
+            max-width: 100%;
+        }
+
+        .collaborator-img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            object-fit: contain;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .collaborator-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            color: white;
+            border-radius: 50%;
+        }
+
+        .collaborator-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .collaborator-description {
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .collaborator-item:hover .collaborator-img {
+            transform: scale(1.1);
+        }
+
+        .collaborator-item:hover .collaborator-overlay {
+            opacity: 1;
+        }
+
+        .collaborator-item:hover .collaborator-img {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Keyframes for scrolling animation (Left to Right and Restart from Left) */
+        @keyframes scrollCollaborators {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .collaborators-scroll {
+                animation: scrollCollaborators 20s linear infinite;
+            }
+
+            .collaborator-item {
+                margin-right: 15px;
+            }
+
+            .collaborator-img {
+                max-width: 120px;
+                width: 100%;
+                height: auto;
+            }
+
+            .collaborator-name {
+                font-size: 1rem;
+            }
+
+            .collaborator-description {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h1 class="mb-3">What Our Clients Say About Maikisaan!</h1>
+                <p>We are committed to empowering farmers and providing them with the tools and knowledge they need
+                    to succeed. Here’s what some of our valued clients have to say about their experience with
+                    Maikisaan.</p>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-item bg-light rounded p-3">
+                    <div class="bg-white border rounded p-4" style="min-height: 300px;">
+                        <p>"Maikisaan has helped me access the resources and support I need to grow my farm. The
+                            knowledge shared has greatly improved my farming techniques, leading to higher yields
+                            and better profits. I truly appreciate their dedication to helping farmers like me!"</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/FarmerImg4.jpg"
+                                style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Ramesh Kumar</h6>
+                                <small>Farmer, Maharashtra</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-item bg-light rounded p-3">
+                    <div class="bg-white border rounded p-4" style="min-height: 300px;">
+                        <p>"I’ve been using Maikisaan's platform for a few months now, and I can already see a
+                            significant difference in my productivity. Their expert advice and services have made
+                            farming easier and more profitable for me. I’m grateful for Maikisaan's continued
+                            support!"</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/FarmerImg.jpg"
+                                style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Anjali Verma</h6>
+                                <small>Organic Farmer, Uttar Pradesh</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-item bg-light rounded p-3">
+                    <div class="bg-white border rounded p-4" style="min-height: 300px;">
+                        <p>"Maikisaan's platform has been a game changer for me. I’ve been able to connect with
+                            experts and other farmers, exchanging valuable insights and resources. The knowledge
+                            I’ve gained has helped me improve my crop quality and increase my income. Highly
+                            recommended!"</p>
+                        <div class="d-flex align-items-center">
+                            <img class="img-fluid flex-shrink-0 rounded" src="img/FarmerImg3.jpg"
+                                style="width: 45px; height: 45px;">
+                            <div class="ps-3">
+                                <h6 class="fw-bold mb-1">Sitaram Yadav</h6>
+                                <small>Agriculture Consultant</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Testimonial End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Get In Touch</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Gera Imperim rise, 328-B, Wipro circle,
+                        Opp. to Wipro Company, Hinjawadi Phase II, Hinjawadi Rajiv Gandhi Infotech Park, Hinjawadi,
+                        Pune, Pimpri-Chinchwad, Maharashtra 411057</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 7972001740</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>maikisaanofficial@gmail.com</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-outline-light btn-social me-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social me-2" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <a class="btn btn-link text-white-50 mb-2" href="">About Us</a>
+                    <a class="btn btn-link text-white-50 mb-2" href="">Contact Us</a>
+                    <a class="btn btn-link text-white-50 mb-2" href="">Our Services</a>
+                    <a class="btn btn-link text-white-50 mb-2" href="">Privacy Policy</a>
+                    <a class="btn btn-link text-white-50 mb-2" href="">Terms & Condition</a>
+                </div>
+
+                <!-- Maikisaan Section -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Maikisaan</h5>
+                    <p>Empowering Farmers With Knowledge And Trust</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control bg-transparent text-white-50 w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Useful Links</h5>
+                    <div class="footer-menu">
+                        <a href="" class="text-white-50 mb-2 d-block">Home</a>
+                        <a href="" class="text-white-50 mb-2 d-block">Cookies</a>
+                        <a href="" class="text-white-50 mb-2 d-block">Help</a>
+                        <a href="" class="text-white-50 mb-2 d-block">FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom text-white-50" href="#">Maikisaan</a>, All Right Reserved.
+                        Designed By <a class="border-bottom text-white-50" href="">Vishwa</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="" class="text-white-50">Privacy Policy</a>
+                            <a href="" class="text-white-50">Terms of Service</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

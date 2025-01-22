@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Mandi Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap');
+
+        :root {
+            --primary: #00B98E;
+            --secondary: #FF6922;
+            --light: #EFFDF5;
+            --dark: #0E2E50;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .dashboard {
+            max-width: 1200px;
+            margin: 1rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .chart-card {
+            padding: 1rem;
+            background-color: var(--light);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        canvas {
+            max-width: 100%;
+            height: 300px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Mai Kisaan - Price Mandi</h1>
+    </header>
+
+    <div class="dashboard">
+        <div class="chart-grid">
+            <div class="chart-card">
+                <h2>Comparative Price Graph</h2>
+                <canvas id="priceComparisonChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Price Trends</h2>
+                <canvas id="priceTrendsChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Market Share</h2>
+                <canvas id="marketShareChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <h2>Regional Price Analysis</h2>
+                <canvas id="regionalPriceChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var ctx1 = document.getElementById('priceComparisonChart').getContext('2d');
+        var priceComparisonChart = new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: ['Wheat', 'Rice', 'Maize', 'Sugarcane'],
+                datasets: [
+                    {
+                        label: 'Mai Kisaan Market',
+                        data: [2000, 2100, 2200, 2300],
+                        borderColor: '#66E0C2',
+                        backgroundColor: 'rgba(102, 224, 194, 0.2)',
+                        fill: false
+                    },
+                    {
+                        label: 'Indian Market',
+                        data: [1900, 2000, 2050, 2100],
+                        borderColor: '#FFA07A',
+                        backgroundColor: 'rgba(255, 160, 122, 0.2)',
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+
+        var ctx2 = document.getElementById('priceTrendsChart').getContext('2d');
+        var priceTrendsChart = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr'],
+                datasets: [{
+                    label: 'Price Trends',
+                    data: [1500, 1600, 1700, 1800],
+                    backgroundColor: '#66E0C2'
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        var ctx3 = document.getElementById('marketShareChart').getContext('2d');
+        var marketShareChart = new Chart(ctx3, {
+            type: 'pie',
+            data: {
+                labels: ['Wheat', 'Rice', 'Maize', 'Sugarcane'],
+                datasets: [{
+                    data: [40, 30, 20, 10],
+                    backgroundColor: ['#66E0C2', '#FFA07A', '#FFB74D', '#4DB6AC']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+
+        var ctx4 = document.getElementById('regionalPriceChart').getContext('2d');
+        var regionalPriceChart = new Chart(ctx4, {
+            type: 'doughnut',
+            data: {
+                labels: ['North', 'South', 'East', 'West'],
+                datasets: [{
+                    data: [35, 25, 20, 20],
+                    backgroundColor: ['#66E0C2', '#FFA07A', '#FFB74D', '#4DB6AC']
+                }]
+            },
+            options: {
+                responsive: true
+            }
+        });
+    </script>
+</body>
+
+</html>
